@@ -1,0 +1,223 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-09-16 11:43:17.912595",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_lf1m",
+  "amended_from",
+  "naming_series",
+  "visitor_type",
+  "column_break_pyqp",
+  "visitor_invitation",
+  "identitycontact",
+  "visitor_full_name",
+  "mobile_number",
+  "email_id",
+  "visitor_photo",
+  "column_break_aico",
+  "id_proof_type",
+  "id_proof_number",
+  "id_proof_scan",
+  "visit_plan_tab",
+  "person_to_visit",
+  "department",
+  "purpose_of_visit",
+  "column_break_prrx",
+  "visit_date",
+  "expected_checkin",
+  "expected_checkout",
+  "vehicle_number",
+  "visitor_items_section",
+  "items",
+  "connection_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_lf1m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Visitor Pass",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "identitycontact",
+   "fieldtype": "Section Break",
+   "label": "Identity & Contact"
+  },
+  {
+   "fieldname": "visitor_full_name",
+   "fieldtype": "Data",
+   "label": "Visitor Full Name"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "label": "Visit Date"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "id_proof_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "ID Proof Type",
+   "options": "Aadhar\nPAN Card\nPassport\nDriving Licence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_aico",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_proof_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID Proof Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "id_proof_scan",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "ID Proof Scan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visitor_photo",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Visitor Photo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_plan_tab",
+   "fieldtype": "Tab Break",
+   "label": "Visit Plan"
+  },
+  {
+   "fieldname": "person_to_visit",
+   "fieldtype": "Link",
+   "label": "Person to Visit",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "person_to_visit.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "purpose_of_visit",
+   "fieldtype": "Small Text",
+   "label": "Purpose of Visit"
+  },
+  {
+   "fieldname": "expected_checkin",
+   "fieldtype": "Time",
+   "label": "Expected Check-In"
+  },
+  {
+   "fieldname": "column_break_prrx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_checkout",
+   "fieldtype": "Time",
+   "label": "Expected Check-Out"
+  },
+  {
+   "description": "Leave blank if arriving without a vehicle",
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Number"
+  },
+  {
+   "fieldname": "visitor_items_section",
+   "fieldtype": "Section Break",
+   "label": "Visitor Items"
+  },
+  {
+   "description": "Will you be carrying any laptops, storage devices, tools, or similar items? List them below so security can verify them at the gate.",
+   "fieldname": "items",
+   "fieldtype": "Small Text",
+   "label": "Items"
+  },
+  {
+   "fieldname": "visitor_type",
+   "fieldtype": "Select",
+   "label": "Visitor Type",
+   "options": "Customer\nSupplier\nContractor\nCandidate"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "VP-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "column_break_pyqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visitor_invitation",
+   "fieldtype": "Link",
+   "label": "Visitor Invitation",
+   "options": "Visitor Invitation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "connection_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connection",
+   "show_dashboard": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-09-17 11:11:14.970234",
+ "modified_by": "Administrator",
+ "module": "Visitors Management",
+ "name": "Visitor Pass",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

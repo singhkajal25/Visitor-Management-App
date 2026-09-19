@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-09-16 11:15:45.713028",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "visitor_type",
+  "visitor_email",
+  "visit_date",
+  "created_by_user",
+  "invitation_status",
+  "invitation_expires_on",
+  "access_token",
+  "visitor_pass",
+  "connection_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "VINV-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "visitor_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Visitor Type",
+   "options": "\nCustomer\nSupplier\nCandidate\nContractor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visitor_email",
+   "fieldtype": "Data",
+   "label": "Visitor Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invitation_expires_on",
+   "fieldtype": "Datetime",
+   "label": "Invitation Expires On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invitation_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Invitation Status",
+   "options": "Draft\nSent\nRegistered\nExpired",
+   "read_only": 1
+  },
+  {
+   "fieldname": "access_token",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Access Token"
+  },
+  {
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "label": "Visit Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "connection_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connection",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "visitor_pass",
+   "fieldtype": "Link",
+   "label": "Visitor Pass",
+   "options": "Visitor Pass",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-17 13:15:14.546254",
+ "modified_by": "Administrator",
+ "module": "Visitors Management",
+ "name": "Visitor Invitation",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Sent"
+  },
+  {
+   "color": "Green",
+   "title": "Registered"
+  },
+  {
+   "color": "Red",
+   "title": "Expired"
+  }
+ ]
+}
